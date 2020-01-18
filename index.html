@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML TABLE GENERATOR</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <label for="rows">rows:</label>
+            <input type="text" name="rows" id="rows">
+            <label for="columns">columns:</label>
+            <input type="text" name="columns" id="columns">
+            <input type="submit" value="Submit" id="generate">
+            <label for="tWidth">width %:</label>
+            <input type="text" name="tWidth" id="tWidth">
+            <label for="bWidth">border width px:</label>
+            <input type="text" name="bWidth" id="bWidth">
+            <label for="tableBG">body background:</label>
+            <input type="color" name="tableBG" id="tableBG">
+            <label for="headerBG">header background:</label>
+            <input type="color" name="headerBG" id="headerBG">
+        </div>
+    </header>
+
+    <div id="main-container"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
