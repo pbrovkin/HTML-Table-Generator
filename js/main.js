@@ -23,6 +23,14 @@ document.getElementById('headerBG').oninput = function () {
     headerBG();
 }
 
+document.getElementById('bColor').oninput = function () {
+    borderColor();
+}
+
+document.getElementById('fColor').oninput = function () {
+    fontColor();
+}
+
 
 function generateTable() {
     emptyTable();
@@ -78,10 +86,17 @@ function tableWidth() {
 function borderWidth() {
     let bWidth = document.getElementById('bWidth').value;
     let tElements = document.querySelectorAll('.tElem');
-    //let tElements = document.getElementsByClassName('tElem');
     table.style.borderCollapse = "collapse";
     for (let element of tElements) {
         element.style.border = bWidth + 'px solid black';
+    }
+}
+
+function borderColor() {
+    let bColor = document.getElementById('bColor').value;
+    let tElements = document.querySelectorAll('.tElem');
+    for (let element of tElements) {
+        element.style.borderColor = bColor;
     }
 }
 
@@ -98,6 +113,14 @@ function headerBG() {
     let thList = document.querySelectorAll('th');
     for (let th of thList) {
         th.style.backgroundColor = headerBG;
+    }
+}
+
+function fontColor() {
+    let fColor = document.getElementById('fColor').value;
+    let tdList = document.querySelectorAll('td');
+    for (let td of tdList) {
+        td.style.color = fColor;
     }
 }
 
