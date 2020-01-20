@@ -11,24 +11,106 @@
 
 <body>
     <header>
-        <div>
-            <label for="rows">rows:</label>
-            <input type="text" name="rows" id="rows">
-            <label for="columns">columns:</label>
-            <input type="text" name="columns" id="columns">
-            <input type="submit" value="Generate" id="generate">
-            <label for="tWidth">width %:</label>
-            <input type="text" name="tWidth" id="tWidth">
-            <label for="bWidth">border width px:</label>
-            <input type="text" name="bWidth" id="bWidth">
-            <label for="headerBG">header background:</label>
-            <input type="color" name="headerBG" id="headerBG">
-            <label for="tableBG">table background:</label>
-            <input type="color" name="tableBG" id="tableBG">
-            <label for="bColor">border color:</label>
-            <input type="color" name="bColor" id="bColor">
-            <label for="fColor">font color:</label>
-            <input type="color" name="fColor" id="fColor">
+        <h1>HTML TABLE GENERATOR</h1>
+        <div class="header-container">
+            <div class="params">
+                <div>
+                    <label for="rows">rows:</label>
+                    <input type="text" name="rows" id="rows">
+                </div>
+                <div>
+                    <label for="columns">columns:</label>
+                    <input type="text" name="columns" id="columns">
+                </div>
+                <div>
+                    <label for="tWidth">width %:</label>
+                    <input type="text" name="tWidth" id="tWidth">
+                </div>
+                <div>
+                    <input type="submit" value="Generate" id="generate">
+                </div>
+
+            </div>
+            <div class="params">
+                
+                <div>
+                    <label for="bWidth">border width px:</label>
+                    <input type="text" name="bWidth" id="bWidth">
+                </div>
+                <div>
+                    <label for="fSize">font size px:</label>
+                    <input type="text" name="fSize" id="fSize">
+                </div>
+                <div>
+                    <label for="bColl">border collapse:</label>
+                    <input type="checkbox" name="bColl" id="bColl" checked>
+                </div>
+            </div>
+
+
+            <div class="params">
+
+                <div>
+                    <label for="fType">font type:</label>
+                    <select name="fType" id="fType">
+                        <option>serif</option>
+                        <option>sans-serif</option>
+                        <option>monospace</option>
+                        <option>cursive</option>
+                        <option>fantasy</option>
+                        <!-- <option>Times, 'Times New Roman', serif</option>
+                        <option>Arial, Helvetica, sans-serif</option> -->
+                    </select>
+                </div>
+                <div>
+                    <label for="fWeight">font weight:</label>
+                    <select name="fWeight" id="fWeight">
+                        <option>100</option>
+                        <option>200</option>
+                        <option>300</option>
+                        <option>400</option>
+                        <option>500</option>
+                        <option>600</option>
+                        <option>700</option>
+                        <option>800</option>
+                        <option>900</option>
+                        <option>bold</option>
+                        <option>bolder</option>
+                        <option>lighter</option>
+                        <option>normal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="textAlign">text align:</label>
+                    <select name="textAlign" id="textAlign">
+                        <option>center</option>
+                        <option>left</option>
+                        <option>right</option>
+                        <option>justify</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="params">
+                <div>
+                    <label for="headerBG">head background:</label>
+                    <input type="color" name="headerBG" id="headerBG">
+                </div>
+                <div>
+                    <label for="tableBG">table background:</label>
+                    <input type="color" name="tableBG" id="tableBG">
+                </div>
+            </div>
+            <div class="params">
+                <div>
+                    <label for="bColor">border color:</label>
+                    <input type="color" name="bColor" id="bColor">
+                </div>
+                <div>
+                    <label for="fColor">font color:</label>
+                    <input type="color" name="fColor" id="fColor">
+                </div>
+            </div>
         </div>
     </header>
 

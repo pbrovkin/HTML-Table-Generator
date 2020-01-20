@@ -31,6 +31,32 @@ document.getElementById('fColor').oninput = function () {
     fontColor();
 }
 
+document.getElementById('bColl').onchange = function () {
+    borderSep();
+    if (document.getElementById('bColl').checked === true) {
+        borderColl();
+    }
+}
+
+document.getElementById('fType').onchange = function () {
+    fontFamily();
+}
+
+document.getElementById('fWeight').onchange = function () {
+    fontWeight();
+}
+
+document.getElementById('textAlign').onchange = function () {
+    textAlign();
+}
+
+
+document.getElementById('fSize').oninput = function () {
+    fSize();
+}
+
+
+
 
 function generateTable() {
     emptyTable();
@@ -122,6 +148,39 @@ function fontColor() {
     for (let td of tdList) {
         td.style.color = fColor;
     }
+}
+
+function borderColl() {
+    table.style.borderCollapse = 'collapse';
+}
+function borderSep() {
+    table.style.borderCollapse = 'separate';
+}
+
+function fontFamily() {
+    let fontFam = document.getElementById('fType').value;
+    table.style.fontFamily = fontFam;
+}
+
+function fontWeight() {
+    let fWeight = document.getElementById('fWeight').value;
+    table.style.fontWeight = fWeight;
+}
+
+function textAlign() {
+    let tAlign = document.getElementById('textAlign').value;
+    let tdList = document.querySelectorAll('td');
+    for (let td of tdList) {
+        td.style.textAlign = tAlign;
+    }
+}
+
+function fSize() {
+    let fSize = document.getElementById('fSize').value;
+    if (fSize === null) {
+        table.style.fontSize = 16 + 'px';
+    }
+    table.style.fontSize = fSize + 'px';
 }
 
 
