@@ -10,9 +10,13 @@
 </head>
 
 <body>
+
     <header>
+
         <h1>HTML TABLE GENERATOR</h1>
+
         <div class="header-container">
+            
             <div class="params">
                 <div>
                     <label for="rows">rows:</label>
@@ -24,32 +28,32 @@
                 </div>
                 <div>
                     <label for="tWidth">width %:</label>
-                    <input type="text" name="tWidth" id="tWidth">
+                    <input type="text" name="tWidth" id="tWidth" value="100">
                 </div>
                 <div>
                     <input type="submit" value="Generate" id="generate">
                 </div>
-
             </div>
+
             <div class="params">
-                
                 <div>
                     <label for="bWidth">border width px:</label>
-                    <input type="text" name="bWidth" id="bWidth">
+                    <input type="text" name="bWidth" id="bWidth" value="3">
                 </div>
                 <div>
                     <label for="fSize">font size px:</label>
-                    <input type="text" name="fSize" id="fSize">
+                    <input type="text" name="fSize" id="fSize" value="16">
                 </div>
                 <div>
                     <label for="bColl">border collapse:</label>
                     <input type="checkbox" name="bColl" id="bColl" checked>
                 </div>
+                <div>
+                    <input type="submit" value="Get Code" id="getCode">
+                </div>
             </div>
 
-
             <div class="params">
-
                 <div>
                     <label for="fType">font type:</label>
                     <select name="fType" id="fType">
@@ -58,8 +62,6 @@
                         <option>monospace</option>
                         <option>cursive</option>
                         <option>fantasy</option>
-                        <!-- <option>Times, 'Times New Roman', serif</option>
-                        <option>Arial, Helvetica, sans-serif</option> -->
                     </select>
                 </div>
                 <div>
@@ -89,8 +91,9 @@
                         <option>justify</option>
                     </select>
                 </div>
-                
+                <span id="error"></span>
             </div>
+
             <div class="params">
                 <div>
                     <label for="headerBG">head background:</label>
@@ -101,6 +104,7 @@
                     <input type="color" name="tableBG" id="tableBG">
                 </div>
             </div>
+
             <div class="params">
                 <div>
                     <label for="bColor">border color:</label>
@@ -111,7 +115,9 @@
                     <input type="color" name="fColor" id="fColor">
                 </div>
             </div>
+
         </div>
+
     </header>
 
     <div id="main-container"></div>

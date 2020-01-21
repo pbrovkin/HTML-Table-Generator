@@ -1,6 +1,7 @@
 let div = document.getElementById('main-container');
 
 let table = document.createElement('table');
+table.id = 'utable';
 table.class = 'tElem';
 
 div.append(table);
@@ -12,7 +13,11 @@ document.getElementById('tWidth').oninput = function () {
 }
 
 document.getElementById('bWidth').oninput = function () {
-    borderWidth();
+    document.getElementById('error').textContent = '';
+    if (borderWidthCorrect(document.getElementById('bWidth').value)) {
+        borderWidth();
+    }
+
 }
 
 document.getElementById('tableBG').oninput = function () {
@@ -52,17 +57,25 @@ document.getElementById('textAlign').onchange = function () {
 
 
 document.getElementById('fSize').oninput = function () {
-    fSize();
+    if (valueIsCorrect(document.getElementById('fSize').value)) {
+        fSize();
+    }
+
+}
+
+document.getElementById('getCode').onclick = function() {
+    getTableCode();
 }
 
 
 
-
+//main function to generate table
 function generateTable() {
     emptyTable();
     generateRows();
     generateHeader();
     generateColumns();
+    borderWidth();
 }
 
 function emptyTable() {
@@ -73,24 +86,28 @@ function emptyTable() {
 
 function generateRows() {
     let rowsInput = document.getElementById('rows').value;
-    for (let i = 0; i <= rowsInput; i++) {
-        let tr = document.createElement('tr');
-        table.append(tr);
+    if (valueIsCorrect(rowsInput)) {
+        for (let i = 0; i <= rowsInput; i++) {
+            let tr = document.createElement('tr');
+            table.append(tr);
+        }
     }
+
 }
 
 function generateColumns() {
     let rows = document.getElementsByTagName('tr');
     let colsInput = document.getElementById('columns').value;
+    if (valueIsCorrect(colsInput)) {
+        generateHeader(rows, colsInput);
 
-    generateHeader(rows, colsInput);
-
-    for (let i = 1; i < rows.length; i++) {
-        for (let j = 1; j <= colsInput; j++) {
-            let td = document.createElement('td');
-            td.className = 'tElem';
-            td.textContent = i;
-            rows[i].append(td);
+        for (let i = 1; i < rows.length; i++) {
+            for (let j = 1; j <= colsInput; j++) {
+                let td = document.createElement('td');
+                td.className = 'tElem';
+                td.textContent = 'value';
+                rows[i].append(td);
+            }
         }
     }
 }
@@ -181,6 +198,27 @@ function fSize() {
         table.style.fontSize = 16 + 'px';
     }
     table.style.fontSize = fSize + 'px';
+}
+
+function valueIsCorrect(val) {
+    document.getElementById('error').textContent = '';
+    if (val !== '' && Number.isInteger(Number(val)) && val > 0) {
+        return true;
+    }
+    document.getElementById('error').innerHTML = 'Enter integer value > 0';
+}
+
+function borderWidthCorrect(val) {
+    if (Number.isInteger(Number(val)) && val >= 0) {
+        return true;
+    } else {
+        document.getElementById('error').innerHTML = 'Enter integer value ≥ 0';
+    }
+}
+
+function getTableCode() {
+    let string = document.getElementsByTagName('table')[0].innerHTML;
+    navigator.clipboard.writeText(string);
 }
 
 
