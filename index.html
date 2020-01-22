@@ -16,7 +16,7 @@
         <h1>HTML TABLE GENERATOR</h1>
 
         <div class="header-container">
-            
+
             <div class="params">
                 <div>
                     <label for="rows">rows:</label>
@@ -48,9 +48,7 @@
                     <label for="bColl">border collapse:</label>
                     <input type="checkbox" name="bColl" id="bColl" checked>
                 </div>
-                <div>
-                    <input type="submit" value="Get Code" id="getCode">
-                </div>
+                <span id="error"></span>
             </div>
 
             <div class="params">
@@ -91,17 +89,24 @@
                         <option>justify</option>
                     </select>
                 </div>
-                <span id="error"></span>
             </div>
 
             <div class="params">
                 <div>
-                    <label for="headerBG">head background:</label>
-                    <input type="color" name="headerBG" id="headerBG">
+                    <label for="headBG">head background:</label>
+                    <input type="color" name="headBG" id="headBG">
                 </div>
                 <div>
                     <label for="tableBG">table background:</label>
                     <input type="color" name="tableBG" id="tableBG">
+                </div>
+                <div>
+                    <label for="evenBG">even background:</label>
+                    <input type="color" name="evenBG" id="evenBG">
+                </div>
+                <div>
+                    <label for="oddBG">odd background:</label>
+                    <input type="color" name="oddBG" id="oddBG">
                 </div>
             </div>
 
@@ -113,6 +118,9 @@
                 <div>
                     <label for="fColor">font color:</label>
                     <input type="color" name="fColor" id="fColor">
+                </div>
+                <div>
+                    <input type="submit" value="Get Code" id="getCode">
                 </div>
             </div>
 
