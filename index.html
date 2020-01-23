@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML TABLE GENERATOR</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>HTML TABLE GENERATOR</h1>
+
+        <div class="header-container">
+
+            <div class="params">
+                <div>
+                    <label for="rows">rows:</label>
+                    <input type="text" name="rows" id="rows">
+                </div>
+                <div>
+                    <label for="columns">columns:</label>
+                    <input type="text" name="columns" id="columns">
+                </div>
+                <div>
+                    <label for="tWidth">width %:</label>
+                    <input type="text" name="tWidth" id="tWidth" value="100">
+                </div>
+                <div>
+                    <input type="submit" value="Generate" id="generate">
+                </div>
+            </div>
+
+            <div class="params">
+                <div>
+                    <label for="bWidth">border width px:</label>
+                    <input type="text" name="bWidth" id="bWidth" value="3">
+                </div>
+                <div>
+                    <label for="fSize">font size px:</label>
+                    <input type="text" name="fSize" id="fSize" value="16">
+                </div>
+                <div>
+                    <label for="bColl">border collapse:</label>
+                    <input type="checkbox" name="bColl" id="bColl" checked>
+                </div>
+                <div id="error">
+
+                </div>
+
+            </div>
+
+            <div class="params">
+                <div>
+                    <label for="fType">font type:</label>
+                    <select name="fType" id="fType">
+                        <option>serif</option>
+                        <option>sans-serif</option>
+                        <option>monospace</option>
+                        <option>cursive</option>
+                        <option>fantasy</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fWeight">font weight:</label>
+                    <select name="fWeight" id="fWeight">
+                        <option>100</option>
+                        <option>200</option>
+                        <option>300</option>
+                        <option>400</option>
+                        <option>500</option>
+                        <option>600</option>
+                        <option>700</option>
+                        <option>800</option>
+                        <option>900</option>
+                        <option>bold</option>
+                        <option>bolder</option>
+                        <option>lighter</option>
+                        <option>normal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="textAlign">text align:</label>
+                    <select name="textAlign" id="textAlign">
+                        <option>center</option>
+                        <option>left</option>
+                        <option>right</option>
+                        <option>justify</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="params">
+                <div>
+                    <label for="headBG">head background:</label>
+                    <input type="color" name="headBG" id="headBG">
+                </div>
+                <div>
+                    <label for="tableBG">table background:</label>
+                    <input type="color" name="tableBG" id="tableBG">
+                </div>
+                <div>
+                    <label for="evenBG">even background:</label>
+                    <input type="color" name="evenBG" id="evenBG">
+                </div>
+                <div>
+                    <label for="oddBG">odd background:</label>
+                    <input type="color" name="oddBG" id="oddBG">
+                </div>
+            </div>
+
+            <div class="params">
+                <div>
+                    <label for="bColor">border color:</label>
+                    <input type="color" name="bColor" id="bColor">
+                </div>
+                <div>
+                    <label for="fColor">font color:</label>
+                    <input type="color" name="fColor" id="fColor">
+                </div>
+                <div>
+                    <input type="submit" value="Get Code" id="getCode">
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="main-container"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
